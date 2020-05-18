@@ -5,7 +5,7 @@
     border-radius: 4px;
     margin: 0;
     text-decoration: none;
-    background: #000000;
+    background: #002496;
     color: #ffffff;
     font-family: sans-serif;
     font-size: 1rem;
@@ -28,4 +28,10 @@
 
 .Buton:active {
   transform: scale(0.99);
+}
+
+@media screen and (min-width: 1200px) {
+  .Button {
+    font-size: 1.5rem;
+  }
 }
