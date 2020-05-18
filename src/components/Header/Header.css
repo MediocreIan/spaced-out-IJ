@@ -21,3 +21,13 @@
 .Header a {
     color: white;
 }
+
+.Header nav a {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .Header nav a {
+        font-size: 1.5rem;
+    }
+}

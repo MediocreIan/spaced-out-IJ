@@ -29,3 +29,9 @@
 .Buton:active {
   transform: scale(0.99);
 }
+
+@media screen and (min-width: 1200px) {
+  .Button {
+    font-size: 1.5rem;
+  }
+}
