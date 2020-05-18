@@ -2,7 +2,7 @@
   border: 0.4px solid #4d0404;
   border-radius: 4px;
   padding: 0.45rem;
-  animation: bounce 0.3s ease-in 0s forwards;
+  animation: bounce 0.3s ease-in-out 0s forwards;
 }
 
 .Alert p {
