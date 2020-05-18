@@ -1,0 +1,30 @@
+.Alert {
+  border: 0.4px solid #4d0404;
+  border-radius: 4px;
+  padding: 0.45rem;
+  animation: bounce 0.3s ease-in 0s forwards;
+}
+
+.Alert p {
+  color: #921b1b;
+  text-align: center;
+  font-weight: 700;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-3px);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
