@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
+import { Input, Label } from '../Form/Form';
 import languageService from '../../services/language-service';
 
 import './Learning.css';
@@ -28,13 +29,13 @@ class Learning extends Component {
         <h2>Translate the word: {nextWord}</h2>
         <p>Your total score is: {totalScore}</p>
         <form>
-          <input
+          <Input
             type="text"
             id="learn-guess-input"
             name="learn-guess-input"
             required
-          ></input>
-          <label htmlFor="learn-guess-input">Guess</label>
+          ></Input>
+          <Label htmlFor="learn-guess-input">Guess</Label>
           <Button type="submit">Guess!</Button>
         </form>
         <div>
