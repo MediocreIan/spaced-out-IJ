@@ -26,9 +26,6 @@ export default class Dashboard extends Component {
             );
           })}
         </ul>
-        {/* button component goes here 
-        <Buttone>
-        */}
       </>
     );
   }
