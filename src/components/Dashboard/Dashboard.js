@@ -1,6 +1,6 @@
-import WordContext from "../../contexts/WordContext";
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import WordContext from '../../contexts/WordContext';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Dashboard extends Component {
   static contextType = WordContext;

@@ -7,11 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  font-family: "Ubuntu", sans-serif;
-=======
   font-family: 'Ubuntu', sans-serif;
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,8 +15,6 @@ body {
 :root {
   --font-size: calc(10px + 1vmin);
 }
-<<<<<<< HEAD
-=======
 
 h1,
 h2,
@@ -34,4 +28,3 @@ h4 {
     font-size: 1.5rem;
   }
 }
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930

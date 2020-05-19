@@ -16,13 +16,8 @@ const isLocalhost = Boolean(
     window.location.hostname === '[::1]' ||
     // 127.0.0.1/8 is considered localhost for IPv4.
     window.location.hostname.match(
-<<<<<<< HEAD
-      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-    )
-=======
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/,
     ),
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
 );
 
 export function register(config) {
@@ -48,11 +43,7 @@ export function register(config) {
         navigator.serviceWorker.ready.then(() => {
           console.log(
             'This web app is being served cache-first by a service ' +
-<<<<<<< HEAD
-              'worker. To learn more, visit http://bit.ly/CRA-PWA'
-=======
               'worker. To learn more, visit http://bit.ly/CRA-PWA',
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
           );
         });
       } else {
@@ -66,11 +57,7 @@ export function register(config) {
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
-<<<<<<< HEAD
-    .then(registration => {
-=======
     .then((registration) => {
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         if (installingWorker == null) {
@@ -84,11 +71,7 @@ function registerValidSW(swUrl, config) {
               // content until all client tabs are closed.
               console.log(
                 'New content is available and will be used when all ' +
-<<<<<<< HEAD
-                  'tabs for this page are closed. See http://bit.ly/CRA-PWA.'
-=======
                   'tabs for this page are closed. See http://bit.ly/CRA-PWA.',
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
               );
 
               // Execute callback
@@ -110,11 +93,7 @@ function registerValidSW(swUrl, config) {
         };
       };
     })
-<<<<<<< HEAD
-    .catch(error => {
-=======
     .catch((error) => {
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
       console.error('Error during service worker registration:', error);
     });
 }
@@ -122,11 +101,7 @@ function registerValidSW(swUrl, config) {
 function checkValidServiceWorker(swUrl, config) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)
-<<<<<<< HEAD
-    .then(response => {
-=======
     .then((response) => {
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
       // Ensure service worker exists, and that we really are getting a JS file.
       const contentType = response.headers.get('content-type');
       if (
@@ -134,11 +109,7 @@ function checkValidServiceWorker(swUrl, config) {
         (contentType != null && contentType.indexOf('javascript') === -1)
       ) {
         // No service worker found. Probably a different app. Reload the page.
-<<<<<<< HEAD
-        navigator.serviceWorker.ready.then(registration => {
-=======
         navigator.serviceWorker.ready.then((registration) => {
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
           registration.unregister().then(() => {
             window.location.reload();
           });
@@ -150,22 +121,14 @@ function checkValidServiceWorker(swUrl, config) {
     })
     .catch(() => {
       console.log(
-<<<<<<< HEAD
-        'No internet connection found. App is running in offline mode.'
-=======
         'No internet connection found. App is running in offline mode.',
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
       );
     });
 }
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
-<<<<<<< HEAD
-    navigator.serviceWorker.ready.then(registration => {
-=======
     navigator.serviceWorker.ready.then((registration) => {
->>>>>>> cc183f9263a14fe5c75356459b688f648d377930
       registration.unregister();
     });
   }
