@@ -1,7 +1,6 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
-import UserContext from "../../contexts/UserContext";
-import WordContext from "../../contexts/WordContext";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import UserContext from '../../contexts/UserContext';
 
 export default function PrivateRoute({ component, ...props }) {
   const Component = component;
@@ -16,7 +15,7 @@ export default function PrivateRoute({ component, ...props }) {
             ) : (
               <Redirect
                 to={{
-                  pathname: userContext.user.idle ? "/login" : "/register",
+                  pathname: userContext.user.idle ? '/login' : '/register',
                   state: { from: componentProps.location },
                 }}
               />
