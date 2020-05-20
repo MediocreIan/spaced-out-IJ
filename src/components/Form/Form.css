@@ -55,7 +55,7 @@
   transform: scale(0.8) translateY(-5rem);
 }
 
-.Input:not(::placeholder-shown) + .Label {
+.Input:not(:placeholder-shown) + .Label {
   transform: scale(0.8) translateY(-5rem);
 }
 
