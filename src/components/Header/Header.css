@@ -1,7 +1,9 @@
 .Header {
   background-color: #00794c;
   padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
 }
 
 .Header h1 {
