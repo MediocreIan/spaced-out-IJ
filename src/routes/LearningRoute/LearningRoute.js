@@ -5,7 +5,7 @@ class LearningRoute extends Component {
   render() {
     return (
       <section>
-        <Learning />
+        <Learning state={this.props.location.state} />
       </section>
     );
   }

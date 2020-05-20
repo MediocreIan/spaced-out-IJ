@@ -7,7 +7,13 @@ import './Learning.css';
 
 class Learning extends Component {
   componentDidMount() {
-    languageService.getNextWord().then((data) => this.setState({ ...data }));
+    if (!this.props.state) {
+      languageService.getNextWord().then((data) => this.setState({ ...data }));
+    } else {
+      this.setState({
+        ...this.props.state,
+      });
+    }
   }
 
   state = {
