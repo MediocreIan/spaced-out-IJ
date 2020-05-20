@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   border-bottom: 2px dashed blue;
-  margin: 4rem auto 1rem;
+  margin: 2rem auto 1rem;
 }
 
 .field:after {
@@ -33,6 +33,14 @@
   font-size: 1.2rem;
 }
 
+.Input:invalid {
+  box-shadow: none;
+}
+
+.Input:placeholder-shown {
+  border-right: 5px solid red;
+}
+
 .Input:valid {
   color: green;
 }
@@ -43,12 +51,13 @@
 
 .Label {
   z-index: -1;
-  top: 2rem;
+  top: 2.4rem;
   left: 0;
   position: absolute;
   transform: translateY(-2rem);
   transform-origin: 0%;
   transition: transform 400ms;
+  font-size: 1.2rem;
 }
 
 .field:focus-within .Label {
