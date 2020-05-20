@@ -1,7 +1,9 @@
 .Header {
   background-color: #00794c;
   padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
 }
 
 .Header h1 {
@@ -30,6 +32,14 @@
   text-align: center;
 }
 
+.Header .user_name {
+  color: white;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 700px) {
   .Header nav {
     max-width: 50%;
@@ -50,5 +60,8 @@
   }
   .Header nav {
     max-width: 25%;
+  }
+  .Header .user_name {
+    margin-bottom: 1.5rem;
   }
 }

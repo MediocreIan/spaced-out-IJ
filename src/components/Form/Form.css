@@ -33,14 +33,6 @@
   font-size: 1.2rem;
 }
 
-.Input:valid {
-  color: green;
-}
-
-.Input:invalid {
-  color: red;
-}
-
 .Label {
   z-index: -1;
   top: 2rem;
