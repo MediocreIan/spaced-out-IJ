@@ -50,12 +50,17 @@ class Learning extends Component {
           <Redirect
             to={{
               pathname: '/results',
-              state: { response: this.state.response },
+              state: {
+                ...this.state.response,
+                origional: this.state.nextWord,
+                userAnswer: this.state.guess,
+              },
             }}
           />
         ) : (
           <>
-            <h2>Translate the word: {nextWord}</h2>
+            <h2>Translate the word:</h2>
+            <span>{nextWord}</span>
             <p>Your total score is: {totalScore}</p>
             <form onSubmit={(e) => this.handleGuess(e)}>
               <InputCombo>
@@ -66,9 +71,11 @@ class Learning extends Component {
                   required
                   onChange={this.setGuess}
                 ></Input>
-                <Label htmlFor="learn-guess-input">Guess</Label>
+                <Label htmlFor="learn-guess-input">
+                  What's the translation for this word?
+                </Label>
               </InputCombo>
-              <Button type="submit">Guess!</Button>
+              <Button type="submit">Submit your answer</Button>
             </form>
             <div>
               <p>
