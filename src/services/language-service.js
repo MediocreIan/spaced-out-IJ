@@ -23,5 +23,18 @@ const languageService = {
       },
     }).then((res) => res.json());
   },
+
+  guessWord(guess) {
+    return fetch(`${config.API_ENDPOINT}/language/guess`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        Authorization: `Bearer ${window.localStorage.getItem(
+          'blogful-client-auth-token',
+        )}`,
+      },
+      body: JSON.stringify({ guess }),
+    }).then((res) => res.json());
+  },
 };
 export default languageService;
