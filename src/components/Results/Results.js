@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
+import './Results.css';
 
 export default class Results extends Component {
   state = { ...this.props.state };
@@ -18,8 +19,9 @@ export default class Results extends Component {
             <h2>Good try, but not quite right</h2>{' '}
             <section className="DisplayFeedback">
               <p>
-                The correct translation for {this.state.origional} was{' '}
-                {this.state.answer} and you chose {this.state.userAnswer}!
+                The correct translation for <span>{this.state.origional}</span>{' '}
+                was <span>{this.state.answer}</span> and you chose{' '}
+                <span>{this.state.userAnswer}</span>!
               </p>{' '}
             </section>
           </>
@@ -29,13 +31,15 @@ export default class Results extends Component {
             <h2>You were correct!</h2>{' '}
             <section className="DisplayFeedback">
               <p>
-                The correct translation for {this.state.origional} was{' '}
-                {this.state.answer} and you chose {this.state.userAnswer}!
+                The correct translation for <span>{this.state.origional}</span>{' '}
+                was <span> {this.state.answer}</span> and you chose{' '}
+                <span>{this.state.userAnswer}</span>!
               </p>{' '}
             </section>
           </>
         )}
         <Link
+          className="DisplayScore__next"
           to={{
             pathname: '/learn',
             state: {
