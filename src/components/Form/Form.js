@@ -11,7 +11,7 @@ export const Input = React.forwardRef(({ className, ...props }, ref) => {
     <input
       className={cx('Input', className)}
       type="text"
-      placeholder=""
+      placeholder=" "
       ref={ref}
       {...props}
     />
