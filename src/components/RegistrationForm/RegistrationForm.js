@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Input, Required, Label } from '../Form/Form';
+import { Input, Required, Label, InputCombo } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import Button from '../Button/Button';
 import Alert from '../Alert/Alert';
@@ -43,31 +43,37 @@ class RegistrationForm extends Component {
     return (
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         {error && <Alert error={error} />}
-        <Label htmlFor="registration-name-input">
-          Enter your name
-          <Required />
-        </Label>
-        <Input
-          ref={this.firstInput}
-          id="registration-name-input"
-          name="name"
-          required
-        />
-        <Label htmlFor="registration-username-input">
-          Choose a username
-          <Required />
-        </Label>
-        <Input id="registration-username-input" name="username" required />
-        <Label htmlFor="registration-password-input">
-          Choose a password
-          <Required />
-        </Label>
-        <Input
-          id="registration-password-input"
-          name="password"
-          type="password"
-          required
-        />
+        <InputCombo>
+          <Input
+            ref={this.firstInput}
+            id="registration-name-input"
+            name="name"
+            required
+          />
+          <Label htmlFor="registration-name-input">
+            Enter your name
+            <Required />
+          </Label>
+        </InputCombo>
+        <InputCombo>
+          <Input id="registration-username-input" name="username" required />
+          <Label htmlFor="registration-username-input">
+            Choose a username
+            <Required />
+          </Label>
+        </InputCombo>
+        <InputCombo>
+          <Input
+            id="registration-password-input"
+            name="password"
+            type="password"
+            required
+          />
+          <Label htmlFor="registration-password-input">
+            Choose a password
+            <Required />
+          </Label>
+        </InputCombo>
         <footer>
           <Button type="submit">Sign up</Button>
           <Link to="/login">Already have an account?</Link>

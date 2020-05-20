@@ -11,15 +11,21 @@ export const Input = React.forwardRef(({ className, ...props }, ref) => {
     <input
       className={cx('Input', className)}
       type="text"
+      placeholder=""
       ref={ref}
       {...props}
     />
   );
 });
 
+export function InputCombo({ className, ...props }) {
+  return <div className={cx('field', className)}>{props.children}</div>;
+}
+
 export function Required({ className, ...props }) {
   return (
     <span className={cx('Required', className)} {...props}>
+      {' '}
       &#42;
     </span>
   );
