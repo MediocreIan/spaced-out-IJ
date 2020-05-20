@@ -35,7 +35,16 @@ export default class Results extends Component {
             </section>
           </>
         )}
-        <Button>Try another word!</Button>
+        <Link
+          to={{
+            pathname: '/learn',
+            state: {
+              ...this.state,
+            },
+          }}
+        >
+          <Button>Try another word!</Button>
+        </Link>
       </>
     );
   }
