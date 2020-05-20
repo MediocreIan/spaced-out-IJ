@@ -1,0 +1,60 @@
+.Learning__next {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 5px;
+  background-color: rebeccapurple;
+  transform: scale(0);
+  animation: pop_in 0.5s ease 0.1s forwards;
+}
+
+@keyframes pop_in {
+  0% {
+    transform: scale(0);
+  }
+  85% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Learning__total {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.Learning__history {
+  margin-top: 2rem;
+}
+
+.Learning p {
+  text-align: center;
+}
+
+.Learning__correct {
+  color: #00794c;
+  font-weight: 700;
+}
+
+.Learning__incorrect {
+  color: #921b1b;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .Learning__next {
+    font-size: 2.5rem;
+    padding: 1.5rem 3rem;
+  }
+  .Learning__total {
+    font-size: 1.6rem;
+  }
+}
