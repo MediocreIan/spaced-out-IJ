@@ -1,0 +1,96 @@
+.Dashboard__list_head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Dashboard a {
+  color: #00794c;
+}
+
+.Dashboard a {
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 0.4px solid lightgray;
+  border-radius: 4px;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  align-self: center;
+}
+
+.Dashboard h3 {
+  text-align: left;
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.Dashboard__score {
+  display: block;
+  padding: 1rem;
+}
+
+.Dashboard__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.Dashboard__list > li {
+  border: 1px solid lightgray;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 1rem;
+}
+
+.Dashboard__list > li:nth-of-type(even) {
+  border-left: 8px solid #00794c;
+}
+.Dashboard__list > li:nth-of-type(odd) {
+  border-left: 8px solid rebeccapurple;
+}
+
+.Dashboard__list h4 {
+  align-self: center;
+}
+
+.Dashboard__list div {
+  justify-self: center;
+}
+
+.Dashboard__list p > span {
+  font-weight: 700;
+}
+
+.Dashboard__list p:nth-of-type(1) > span:nth-of-type(1) {
+  color: #00794c;
+}
+.Dashboard__list p:nth-of-type(2) > span:nth-of-type(1) {
+  color: #921b1b;
+}
+
+@media screen and (min-width: 1200px) {
+  .Dashboard a {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  .Dashboard__list_head {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Dashboard__list {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
