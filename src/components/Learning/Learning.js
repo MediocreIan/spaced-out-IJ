@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Button from '../Button/Button';
 import { Input, Label, InputCombo } from '../Form/Form';
 import languageService from '../../services/language-service';
-
-import './Learning.css';
 import { Redirect } from 'react-router-dom';
+import './Learning.css';
 
 class Learning extends Component {
   componentDidMount() {
@@ -58,10 +57,10 @@ class Learning extends Component {
             }}
           />
         ) : (
-          <>
+          <section className="Learning">
             <h2>Translate the word:</h2>
-            <span>{nextWord}</span>
-            <p>Your total score is: {totalScore}</p>
+            <span className="Learning__next">{nextWord}</span>
+            <p className="Learning__total">Your total score is: {totalScore}</p>
             <form onSubmit={(e) => this.handleGuess(e)}>
               <InputCombo>
                 <Input
@@ -77,16 +76,19 @@ class Learning extends Component {
               </InputCombo>
               <Button type="submit">Submit your answer</Button>
             </form>
-            <div>
+            <div className="Learning__history">
               <p>
-                You have answered this word correctly {wordCorrectCount} times.
+                You have answered this word{' '}
+                <span className="Learning__correct">correctly</span>{' '}
+                {wordCorrectCount} times.
               </p>
               <p>
-                You have answered this word incorrectly {wordIncorrectCount}{' '}
-                times.
+                You have answered this word{' '}
+                <span className="Learning__incorrect">incorrectly</span>{' '}
+                {wordIncorrectCount} times.
               </p>
             </div>
-          </>
+          </section>
         )}
       </>
     );
