@@ -34,7 +34,6 @@ export class WordProvider extends Component {
   }
 
   render() {
-    console.log(this.state.words);
     const value = {
       words: this.state.words,
       language: this.state.language,
