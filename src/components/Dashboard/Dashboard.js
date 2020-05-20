@@ -14,9 +14,11 @@ export default class Dashboard extends Component {
           <span className="Dashboard__score">
             Total correct answers: {this.context.language.total_score}
           </span>
-          <Link to="/learn">Start practicing</Link>
         </h2>
-        <h3>Words to practice</h3>
+        <div className="Dashboard__list_head">
+          <h3>Words to practice</h3>
+          <Link to="/learn">Start practicing</Link>
+        </div>
         <ul className="Dashboard__list">
           {this.context.words.map((word) => {
             return (
