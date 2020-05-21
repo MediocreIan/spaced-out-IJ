@@ -1,15 +1,19 @@
-# Spaced Repetition Capstone
+# Spaced Out
 
-## Setup
+React application to help learn Afrikaans using spaced reptition.
 
-To setup the application
+See it Live at: [https://spaced-out.now.sh/](https://spaced-out.now.sh/register)
+
+## Setup Locally
+
+To setup the application on your local machine:
 
 1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
+2. `npm install`. This will also install the application _Cypress.io_ for running browser integration tests
 
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
+The project expects you have the Spaced Out API project setup and running on http://localhost:8000.
 
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
+Find instructions to setup the API here [https://github.com/thinkful-ei-macaw/spaced-repetition-api-IJ](https://github.com/thinkful-ei-macaw/spaced-repetition-api-IJ).
 
 ## Running project
 
