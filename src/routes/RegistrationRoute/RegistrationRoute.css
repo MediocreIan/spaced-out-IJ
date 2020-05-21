@@ -1,6 +1,5 @@
 .RegistrationRoute p {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto;
   max-width: 90%;
   text-align: center;
 }
