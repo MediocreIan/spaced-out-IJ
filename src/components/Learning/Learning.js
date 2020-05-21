@@ -77,7 +77,7 @@ class Learning extends Component {
                   onChange={this.setGuess}
                 ></Input>
                 <Label htmlFor="learn-guess-input">
-                  What's the translation for this word?
+                  What's the translation?
                 </Label>
               </InputCombo>
               <Button type="submit">Submit your answer</Button>
