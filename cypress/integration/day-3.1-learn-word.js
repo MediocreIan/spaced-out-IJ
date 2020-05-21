@@ -50,8 +50,10 @@ describe(`User story: Presented with word`, function() {
       .wait('@languageHeadRequest')
 
     cy.get('main form').within($form => {
-      cy.get('label[for=learn-guess-input]')
-        .should('have.text', `What's the translation for this word?`)
+      cy.get('label[for=learn-guess-input]').should(
+        'have.text',
+        `What's the translation?`,
+      );
 
       cy.get('input#learn-guess-input')
         .should('have.attr', 'type', 'text')
