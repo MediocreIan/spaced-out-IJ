@@ -20,7 +20,9 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "format": "prettier \"src/**/*.{js, json}\" --write"
+    "format": "prettier \"src/**/*.{js, json}\" --write",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
   },
   "eslintConfig": {
     "extends": "react-app"
