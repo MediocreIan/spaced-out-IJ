@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
+import ButtonSpinner from '../ButtonSpinner/ButtonSpinner';
 import { Input, Label, InputCombo } from '../Form/Form';
 import languageService from '../../services/language-service';
 import { Redirect } from 'react-router-dom';
@@ -24,6 +25,7 @@ class Learning extends Component {
     guess: '',
     answered: false,
     response: null,
+    loading: false,
   };
 
   setGuess = (e) => {
@@ -34,10 +36,12 @@ class Learning extends Component {
 
   handleGuess = (e) => {
     e.preventDefault();
+    this.setState({ loading: true });
     return languageService.guessWord(this.state.guess).then((res) => {
       this.setState({
         response: res,
         answered: true,
+        loading: false,
       });
     });
   };
@@ -80,7 +84,9 @@ class Learning extends Component {
                   What's the translation?
                 </Label>
               </InputCombo>
-              <Button type="submit">Submit your answer</Button>
+              <Button disabled={this.state.loading} type="submit">
+                {this.state.loading ? <ButtonSpinner /> : 'Submit your answer'}
+              </Button>
             </form>
             <div className="Learning__history">
               <p>

@@ -19,8 +19,8 @@
   border: 8px solid #13315c;
   border-color: #a2b5f7 transparent white transparent;
   border-radius: 50%;
-  height: 1rem;
-  width: 1rem;
+  height: 1.2rem;
+  width: 1.2rem;
   animation: 2s spin linear infinite;
 }
 
