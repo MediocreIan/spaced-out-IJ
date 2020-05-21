@@ -6,6 +6,10 @@ React application to help learn Afrikaans using spaced reptition.
 
 See it Live at: [https://spaced-out.now.sh/](https://spaced-out.now.sh/register)
 
+technology used: React, NodeJs, PostgreSQL, Express, Knex and Cypress IO
+
+
+
 ## Setup Locally
 
 To setup the application on your local machine:
