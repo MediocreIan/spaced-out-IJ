@@ -1,3 +1,11 @@
+.Displayincorrect {
+  color: #921b1b;
+}
+
+.DisplayCorrect {
+  color: #00794c;
+}
+
 .DisplayScore p {
   text-align: center;
   font-size: 1.2rem;
