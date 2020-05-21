@@ -18,8 +18,23 @@ class RegistrationRoute extends Component {
     return (
       <section className="RegistrationRoute">
         <p>
-          Practice learning a language with the spaced reptition revision
-          technique.
+          Practice learning{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Afrikaans"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Afrikaans
+          </a>{' '}
+          with the{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Spaced_repetition"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            spaced reptition
+          </a>{' '}
+          revision technique.
         </p>
         <h2>Sign up</h2>
         <RegistrationForm

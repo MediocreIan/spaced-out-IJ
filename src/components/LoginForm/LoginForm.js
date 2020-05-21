@@ -3,6 +3,7 @@ import { Input, Label, InputCombo } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../contexts/UserContext';
 import Button from '../Button/Button';
+import ButtonSpinner from '../ButtonSpinner/ButtonSpinner';
 import Alert from '../Alert/Alert';
 import './LoginForm.css';
 
@@ -13,7 +14,7 @@ class LoginForm extends Component {
 
   static contextType = UserContext;
 
-  state = { error: null };
+  state = { error: null, loading: false };
 
   firstInput = React.createRef();
 
@@ -21,7 +22,7 @@ class LoginForm extends Component {
     ev.preventDefault();
     const { username, password } = ev.target;
 
-    this.setState({ error: null });
+    this.setState({ error: null, loading: true });
 
     AuthApiService.postLogin({
       username: username.value,
@@ -30,11 +31,12 @@ class LoginForm extends Component {
       .then((res) => {
         username.value = '';
         password.value = '';
+        this.setState({ loading: false });
         this.context.processLogin(res.authToken);
         this.props.onLoginSuccess();
       })
       .catch((res) => {
-        this.setState({ error: res.error });
+        this.setState({ error: res.error, loading: false });
       });
   };
 
@@ -65,7 +67,9 @@ class LoginForm extends Component {
           />
           <Label htmlFor="login-password-input">Password</Label>
         </InputCombo>
-        <Button type="submit">Login</Button>
+        <Button disabled={this.state.loading} type="submit">
+          {this.state.loading ? <ButtonSpinner /> : 'Login'}
+        </Button>
       </form>
     );
   }

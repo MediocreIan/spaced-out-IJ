@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Input, Required, Label, InputCombo } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import Button from '../Button/Button';
+import ButtonSpinner from '../ButtonSpinner/ButtonSpinner';
 import Alert from '../Alert/Alert';
 import './RegistrationForm.css';
 
@@ -11,12 +12,13 @@ class RegistrationForm extends Component {
     onRegistrationSuccess: () => {},
   };
 
-  state = { error: null };
+  state = { error: null, loading: false };
 
   firstInput = React.createRef();
 
   handleSubmit = (ev) => {
     ev.preventDefault();
+    this.setState({ loading: true });
     const { name, username, password } = ev.target;
     AuthApiService.postUser({
       name: name.value,
@@ -27,10 +29,11 @@ class RegistrationForm extends Component {
         name.value = '';
         username.value = '';
         password.value = '';
+        this.setState({ loading: false });
         this.props.onRegistrationSuccess();
       })
       .catch((res) => {
-        this.setState({ error: res.error });
+        this.setState({ error: res.error, loading: false });
       });
   };
 
@@ -75,7 +78,9 @@ class RegistrationForm extends Component {
           </Label>
         </InputCombo>
         <footer>
-          <Button type="submit">Sign up</Button>
+          <Button disabled={this.state.loading} type="submit">
+            {this.state.loading ? <ButtonSpinner /> : 'Sign up'}
+          </Button>
           <Link to="/login">Already have an account?</Link>
         </footer>
       </form>
