@@ -10,7 +10,7 @@ export default class Results extends Component {
       <section className="DisplayScore">
         {!this.state.isCorrect ? (
           <>
-            <h2 className = "Displayincorrect">Nice try!</h2>
+            <h2 className="Displayincorrect">Nice try!</h2>
             <p>
               The correct translation for <span>{this.state.origional}</span>{' '}
               was <span>{this.state.answer}</span> and you chose{' '}
@@ -19,7 +19,7 @@ export default class Results extends Component {
           </>
         ) : (
           <>
-            <h2 className = "DisplayCorrect">Correct!</h2>
+            <h2 className="DisplayCorrect">Correct!</h2>
             <p>
               The correct translation for <span>{this.state.origional}</span>{' '}
               was <span>{this.state.answer}</span> and you chose{' '}
