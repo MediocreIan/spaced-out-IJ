@@ -71,7 +71,11 @@ class Learning extends Component {
             <h2>Translate the word:</h2>
             <span className="Learning__next">{nextWord}</span>
             <p className="Learning__total">Your total score is: {totalScore}</p>
-            <form onSubmit={(e) => this.handleGuess(e)}>
+            <form
+              onSubmit={(e) => this.handleGuess(e)}
+              autoComplete="off"
+            >
+              <input type = "hidden" value = "none"/>
               <InputCombo>
                 <Input
                   type="text"
