@@ -1,5 +1,10 @@
 # Spaced Out
 
+
+![Spaced-learn](https://user-images.githubusercontent.com/35647384/82595207-d1633580-9b6a-11ea-9a5d-2e3a3055f251.png)
+
+![Spaced-dash](https://user-images.githubusercontent.com/35647384/82595174-c5777380-9b6a-11ea-9e8f-10197c71edcc.png)
+
 React application to help learn Afrikaans using spaced reptition.
 
 See it Live at: [https://spaced-out.now.sh/](https://spaced-out.now.sh/register)
