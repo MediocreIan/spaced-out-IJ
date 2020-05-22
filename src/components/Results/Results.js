@@ -4,6 +4,14 @@ import Button from '../Button/Button';
 import './Results.css';
 
 export default class Results extends Component {
+  constructor(props) {
+    super(props);
+    this.Link = React.createRef();
+  }
+
+  componentDidMount() {
+    this.Link.current.focus();
+  }
   state = { ...this.props.state };
   render() {
     return (
@@ -29,7 +37,9 @@ export default class Results extends Component {
         )}
         <p>Your total score is: </p>
         <p className="DisplayScore__total">{this.state.totalScore}</p>
+
         <Link
+        innerRef = {this.Link}
           className="DisplayScore__next"
           to={{
             pathname: '/learn',
