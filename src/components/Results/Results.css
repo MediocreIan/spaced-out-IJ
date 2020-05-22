@@ -37,6 +37,38 @@
   margin-right: auto;
 }
 
+.DisplayScore__next {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  margin: 0;
+  text-decoration: none;
+  background: #002496;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.DisplayScore__next:hover,
+.DisplayScore__next:focus {
+  background: #0053ba;
+}
+
+.DisplayScore__next:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.DisplayScore__next:active {
+  transform: scale(0.99);
+}
+
 @media screen and (min-width: 1200px) {
   .DisplayScore {
     max-width: 50%;
@@ -52,7 +84,7 @@
     font-size: 2.4rem;
   }
 
-  .DisplayScore button {
+  .DisplayScore__next {
     font-size: 1.5rem;
     padding: 2rem 3rem;
   }

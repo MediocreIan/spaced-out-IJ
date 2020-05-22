@@ -38,7 +38,7 @@ export default class Results extends Component {
             },
           }}
         >
-          <Button>Try another word!</Button>
+          Try another word!
         </Link>
       </section>
     );
