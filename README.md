@@ -1,14 +1,18 @@
 # Spaced Out
 
+See it Live at: [https://spaced-out.now.sh/](https://spaced-out.now.sh/register)
 
 ![spaced-out-both-views](https://user-images.githubusercontent.com/35647384/82596291-ad085880-9b6c-11ea-969f-d41a9c2eb6f9.png)
 React application to help learn Afrikaans using spaced reptition.
 
-See it Live at: [https://spaced-out.now.sh/](https://spaced-out.now.sh/register)
+Technology used:
 
-technology used: React, NodeJs, PostgreSQL, Express, Knex and Cypress IO
-
-
+- `React`
+- `Node.js`
+- `PostgreSQL`
+- `Express`
+- `Knex`
+- `Cypress IO`
 
 ## Setup Locally
 
