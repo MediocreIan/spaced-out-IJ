@@ -92,7 +92,10 @@ describe(`User story: Answer feedback`, function () {
             'have.text',
             `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
           );
-          cy.get('button').should('have.text', `Try another word!`);
+          cy.get('.DisplayScore__next').should(
+            'have.text',
+            `Try another word!`,
+          );
         });
       });
     });
@@ -135,7 +138,10 @@ describe(`User story: Answer feedback`, function () {
             'have.text',
             `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
           );
-          cy.get('button').should('have.text', `Try another word!`);
+          cy.get('.DisplayScore__next').should(
+            'have.text',
+            `Try another word!`,
+          );
         });
       });
     });
